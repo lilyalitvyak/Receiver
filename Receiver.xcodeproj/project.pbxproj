@@ -16,6 +16,9 @@
 		841E4C8C2055500C00D8450B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E4C8B2055500C00D8450B /* main.m */; };
 		841E4C962055500D00D8450B /* ReceiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E4C952055500D00D8450B /* ReceiverTests.m */; };
 		841E4CA12055500D00D8450B /* ReceiverUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E4CA02055500D00D8450B /* ReceiverUITests.m */; };
+		841E4CBA2055A7CB00D8450B /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E4CB92055A7CB00D8450B /* ShareViewController.m */; };
+		841E4CBD2055A7CB00D8450B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841E4CBB2055A7CB00D8450B /* MainInterface.storyboard */; };
+		841E4CC12055A7CB00D8450B /* WebmExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 841E4CB62055A7CA00D8450B /* WebmExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +36,28 @@
 			remoteGlobalIDString = 841E4C752055500C00D8450B;
 			remoteInfo = Receiver;
 		};
+		841E4CBF2055A7CB00D8450B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 841E4C6E2055500C00D8450B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 841E4CB52055A7CA00D8450B;
+			remoteInfo = WebmExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		841E4CC52055A7CB00D8450B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				841E4CC12055A7CB00D8450B /* WebmExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		841E4C762055500C00D8450B /* Receiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Receiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +77,13 @@
 		841E4C9C2055500D00D8450B /* ReceiverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		841E4CA02055500D00D8450B /* ReceiverUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiverUITests.m; sourceTree = "<group>"; };
 		841E4CA22055500D00D8450B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841E4CB62055A7CA00D8450B /* WebmExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WebmExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		841E4CB82055A7CB00D8450B /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		841E4CB92055A7CB00D8450B /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		841E4CBC2055A7CB00D8450B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		841E4CBE2055A7CB00D8450B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841E4CC62055A80100D8450B /* WebmExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebmExtension.entitlements; sourceTree = "<group>"; };
+		841E4CC72055A92A00D8450B /* Receiver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Receiver.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +108,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		841E4CB32055A7CA00D8450B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +124,7 @@
 				841E4C782055500C00D8450B /* Receiver */,
 				841E4C942055500D00D8450B /* ReceiverTests */,
 				841E4C9F2055500D00D8450B /* ReceiverUITests */,
+				841E4CB72055A7CB00D8450B /* WebmExtension */,
 				841E4C772055500C00D8450B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +135,7 @@
 				841E4C762055500C00D8450B /* Receiver.app */,
 				841E4C912055500D00D8450B /* ReceiverTests.xctest */,
 				841E4C9C2055500D00D8450B /* ReceiverUITests.xctest */,
+				841E4CB62055A7CA00D8450B /* WebmExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +143,7 @@
 		841E4C782055500C00D8450B /* Receiver */ = {
 			isa = PBXGroup;
 			children = (
+				841E4CC72055A92A00D8450B /* Receiver.entitlements */,
 				841E4C792055500C00D8450B /* AppDelegate.h */,
 				841E4C7A2055500C00D8450B /* AppDelegate.m */,
 				841E4C7C2055500C00D8450B /* ViewController.h */,
@@ -135,6 +176,18 @@
 			path = ReceiverUITests;
 			sourceTree = "<group>";
 		};
+		841E4CB72055A7CB00D8450B /* WebmExtension */ = {
+			isa = PBXGroup;
+			children = (
+				841E4CC62055A80100D8450B /* WebmExtension.entitlements */,
+				841E4CB82055A7CB00D8450B /* ShareViewController.h */,
+				841E4CB92055A7CB00D8450B /* ShareViewController.m */,
+				841E4CBB2055A7CB00D8450B /* MainInterface.storyboard */,
+				841E4CBE2055A7CB00D8450B /* Info.plist */,
+			);
+			path = WebmExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,10 +198,12 @@
 				841E4C722055500C00D8450B /* Sources */,
 				841E4C732055500C00D8450B /* Frameworks */,
 				841E4C742055500C00D8450B /* Resources */,
+				841E4CC52055A7CB00D8450B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				841E4CC02055A7CB00D8450B /* PBXTargetDependency */,
 			);
 			name = Receiver;
 			productName = Receiver;
@@ -191,6 +246,23 @@
 			productReference = 841E4C9C2055500D00D8450B /* ReceiverUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		841E4CB52055A7CA00D8450B /* WebmExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841E4CC22055A7CB00D8450B /* Build configuration list for PBXNativeTarget "WebmExtension" */;
+			buildPhases = (
+				841E4CB22055A7CA00D8450B /* Sources */,
+				841E4CB32055A7CA00D8450B /* Frameworks */,
+				841E4CB42055A7CA00D8450B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebmExtension;
+			productName = WebmExtension;
+			productReference = 841E4CB62055A7CA00D8450B /* WebmExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,6 +275,11 @@
 					841E4C752055500C00D8450B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					841E4C902055500D00D8450B = {
 						CreatedOnToolsVersion = 9.2;
@@ -213,6 +290,15 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 841E4C752055500C00D8450B;
+					};
+					841E4CB52055A7CA00D8450B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -232,6 +318,7 @@
 				841E4C752055500C00D8450B /* Receiver */,
 				841E4C902055500D00D8450B /* ReceiverTests */,
 				841E4C9B2055500D00D8450B /* ReceiverUITests */,
+				841E4CB52055A7CA00D8450B /* WebmExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +345,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841E4CB42055A7CA00D8450B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841E4CBD2055A7CB00D8450B /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +386,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		841E4CB22055A7CA00D8450B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841E4CBA2055A7CB00D8450B /* ShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -303,6 +406,11 @@
 			isa = PBXTargetDependency;
 			target = 841E4C752055500C00D8450B /* Receiver */;
 			targetProxy = 841E4C9D2055500D00D8450B /* PBXContainerItemProxy */;
+		};
+		841E4CC02055A7CB00D8450B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 841E4CB52055A7CA00D8450B /* WebmExtension */;
+			targetProxy = 841E4CBF2055A7CB00D8450B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -321,6 +429,14 @@
 				841E4C882055500C00D8450B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		841E4CBB2055A7CB00D8450B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				841E4CBC2055A7CB00D8450B /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -434,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Receiver/Receiver.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7588NSAN5;
 				INFOPLIST_FILE = Receiver/Info.plist;
@@ -448,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Receiver/Receiver.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7588NSAN5;
 				INFOPLIST_FILE = Receiver/Info.plist;
@@ -516,6 +634,36 @@
 			};
 			name = Release;
 		};
+		841E4CC32055A7CB00D8450B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WebmExtension/WebmExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7588NSAN5;
+				INFOPLIST_FILE = WebmExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.none.idl.Receiver.WebmExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		841E4CC42055A7CB00D8450B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WebmExtension/WebmExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7588NSAN5;
+				INFOPLIST_FILE = WebmExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.none.idl.Receiver.WebmExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -551,6 +699,15 @@
 			buildConfigurations = (
 				841E4CAC2055500D00D8450B /* Debug */,
 				841E4CAD2055500D00D8450B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		841E4CC22055A7CB00D8450B /* Build configuration list for PBXNativeTarget "WebmExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841E4CC32055A7CB00D8450B /* Debug */,
+				841E4CC42055A7CB00D8450B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

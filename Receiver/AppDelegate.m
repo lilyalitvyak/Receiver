@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +18,41 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if (![launchOptions objectForKey:UIApplicationLaunchOptionsURLKey]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Ошибка" message:@"Приложение запущено не из приложения Sender!" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        [alertController addAction:defaultAction];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[[self window] rootViewController] presentViewController:alertController animated:YES completion:^{
+                NSLog(@"SHOW ALERT COMPLETION");
+            }];
+        });
+    }
+    
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    NSString *text = [[url host] stringByRemovingPercentEncoding];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Получен текст" message:text preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    [alertController addAction:defaultAction];
+    [[[self window] rootViewController] presentViewController:alertController animated:YES completion:nil];
+    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if (url){
+        NSString *str = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+        //this is not the way to display this on the screen
+        [[(ViewController *)[[self window] rootViewController] infoTextView] setText:url.path];
+        NSLog(@"The file contained: %@",str);
+    }
+    return YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
