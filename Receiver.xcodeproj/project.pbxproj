@@ -19,6 +19,7 @@
 		841E4CBA2055A7CB00D8450B /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E4CB92055A7CB00D8450B /* ShareViewController.m */; };
 		841E4CBD2055A7CB00D8450B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841E4CBB2055A7CB00D8450B /* MainInterface.storyboard */; };
 		841E4CC12055A7CB00D8450B /* WebmExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 841E4CB62055A7CA00D8450B /* WebmExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		841E4CC92055D00500D8450B /* apple-app-site-association in Resources */ = {isa = PBXBuildFile; fileRef = 841E4CC82055D00500D8450B /* apple-app-site-association */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		841E4CBE2055A7CB00D8450B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841E4CC62055A80100D8450B /* WebmExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebmExtension.entitlements; sourceTree = "<group>"; };
 		841E4CC72055A92A00D8450B /* Receiver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Receiver.entitlements; sourceTree = "<group>"; };
+		841E4CC82055D00500D8450B /* apple-app-site-association */ = {isa = PBXFileReference; lastKnownFileType = text; path = "apple-app-site-association"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				841E4C8A2055500C00D8450B /* Info.plist */,
 				841E4C8B2055500C00D8450B /* main.m */,
 				841E4C822055500C00D8450B /* Receiver.xcdatamodeld */,
+				841E4CC82055D00500D8450B /* apple-app-site-association */,
 			);
 			path = Receiver;
 			sourceTree = "<group>";
@@ -279,6 +282,9 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
 						};
 					};
 					841E4C902055500D00D8450B = {
@@ -330,6 +336,7 @@
 			files = (
 				841E4C892055500C00D8450B /* LaunchScreen.storyboard in Resources */,
 				841E4C862055500C00D8450B /* Assets.xcassets in Resources */,
+				841E4CC92055D00500D8450B /* apple-app-site-association in Resources */,
 				841E4C812055500C00D8450B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
